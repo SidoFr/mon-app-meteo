@@ -1,0 +1,278 @@
+/* #c7f3ff #e0fcff rgb(255,242,0)*/
+:root {
+  --color-one: #1d97c1;
+  --color-two: #53c7f0;
+  --color-three: #87e0ff;
+  --color-five: #e0fcff;
+  --color-four: #c7f3ff;
+  --color-yellow: #FFF1B0;
+  --color-orange: #FA9D1B;
+  --color-grey: rgb(48, 56, 65);
+  --color-bgd: #93deff;
+}
+body {
+  margin: 0;
+  background-color: var(--color-bgd);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+h3 {
+  margin: 0.3em 0;
+  font-size: 1.25em;
+}
+p, h2 {
+  margin: 0.5em 0;
+}
+h2, h3 {
+  font-family: 'Indie Flower', cursive;
+}
+p {
+  font-family: 'Raleway', sans-serif;
+  color: var(--color-grey);
+}
+.app_title {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Indie Flower', cursive;
+  font-size: 4em;
+}
+.app_back {
+  width: 80px;
+  margin: 20px auto;
+  text-align: center;
+  padding: 10px;
+  background-color: var(--color-grey);
+  color: var(--color-bgd);
+  border-radius: 3px;
+  font-family: Raleway, sans-serif;
+  cursor: pointer;  
+}
+footer {
+  text-align: center;
+  margin-top: 10vh;
+  margin-bottom: 10px;
+  font-family: 'Indie Flower', cursive;
+}
+footer a {
+  color: var(--color-grey);
+}
+.fa-twitter, .fa-copyright, .fa-github {
+  color: pink;
+}
+
+.search, .result, .day, .moment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* SEARCH COMPONENT ****************************************/
+.search {
+  height: 350px;
+  width: 80%;
+  margin: auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: 'Raleway', sans-serif;
+}
+.search_search {
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-around;
+      -ms-flex-pack: space-around;
+          justify-content: space-around;
+}
+.search_geo {
+  -webkit-box-shadow: 0 1px 2px 2px var(--color-grey);
+          box-shadow: 0 1px 2px 2px var(--color-grey);
+  border-radius: 5px;
+  padding: 8px;
+  cursor: pointer;
+}
+.search_input_input, .search_submit {
+  height: 30px;
+}
+.search_input_input {
+  text-align: center;
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+  border-bottom-color: var(--color-yellow);
+  border-bottom-width: 3px;
+  border-radius: 3px;
+  font-family: Raleway, sans-serif;
+}
+.search_submit {
+  cursor: pointer;
+  font-family: Raleway, sans-serif;
+  border: 0.5px solid grey;
+  border-radius: 3px;
+}
+.search_welcome {
+  font-size: 0.6em;
+  padding: 0.4em;
+  text-align: justify;
+  line-height: 1.2em;
+  color: var(--color-grey);
+}
+
+/* RESULT COMPONENT **************************************/
+.result {
+  margin: 30px auto;
+  border-radius: 180px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-shadow: 0 0 25px 5px var(--color-yellow),
+      inset 0 0 5px 0 var(--color-orange);
+          box-shadow: 0 0 25px 5px var(--color-yellow),
+      inset 0 0 5px 0 var(--color-orange);
+  width: 300px;
+  height: 300px;
+}
+.result_forecast {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.result_forecast p {
+  margin: 0 2.5px;
+}
+.result_error {
+  text-align: center;
+}
+
+/* DETAILS COMPONENT *****************************************/
+.details {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border-radius: 5px;
+  padding: 10px;
+  -webkit-box-shadow: inset 0 0 10px rgba(48, 56, 65, 0.5);
+          box-shadow: inset 0 0 10px rgba(48, 56, 65, 0.5);
+  width: 50%;
+}
+.details::-webkit-scrollbar {
+  border-radius: 5px;
+  width: 17px;
+  -webkit-box-shadow: 0 0 2px rgba(48, 56, 65, 0.3);
+          box-shadow: 0 0 2px rgba(48, 56, 65, 0.3);
+}
+.details::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: rgba(48, 56, 65, 0.4);
+}
+
+/* DAY COMPONENT ********************************************/
+.day_day {
+  text-transform: uppercase;
+}
+.day_forecast {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 5px;
+  /*grid-auto-flow: column;*/
+  -ms-grid-columns: (auto)[2];
+      grid-template-columns: repeat(2, auto);
+  -ms-grid-rows: (auto)[4];
+      grid-template-rows: repeat(4, auto);
+  margin: 5px 0;
+}
+.moment {
+  border-top: 1px solid rgb(255,241,176);
+  border-radius: 3px;
+}
+.moment_forecast {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.moment_celsius {
+  padding: 0 8px;
+}
+.day {
+  padding: 0 5px;
+  border-radius: 5px;
+}
+.day:first-child {
+  background-color: var(--color-one);
+}
+.day:nth-child(2) {
+  background-color: var(--color-two);
+}.day:nth-child(3) {
+  background-color: var(--color-three);
+}.day:nth-child(4) {
+  background-color: var(--color-four);
+}.day:last-child {
+  background-color: var(--color-five);
+}
+
+/* MEDIA QUERIES **********************************************/
+/* 
+smartphone 320-639
+tablette 640-1024
+16/9 from 1920
+*/
+
+@media only screen and (max-width: 639px) {
+  .details {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 640px) and (max-width: 1024px) {
+  .details {
+    width: 60%;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .details {
+    width: 40%;
+  }
+}
+@media only screen and (min-width: 640px) {
+  .search_search {
+    padding: 0 50px;
+  } 
+}
+@media only screen and (min-width: 1025px) and (max-width: 1919px) {
+  footer {
+    margin: 20vh;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  footer {
+    margin: 30vh;
+  }
+}
